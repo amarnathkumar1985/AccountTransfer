@@ -10,6 +10,7 @@ URL - localhost:18080/v1/accounts
     "accountId":"123",
     "balance": "8000.00"
 }
+
 {
     "accountId":"124",
     "balance": "3000.00"
@@ -19,6 +20,7 @@ URL - localhost:18080/v1/accounts
 URL - localhost:18080/v1/accounts/123/124/3000
 
 validate all scenario
+
 URL - localhost:18080/v1/accounts/123/124/-3000 - for negative balnce    
 
 URL - localhost:18080/v1/accounts/123/125/3000 - account does not exist
@@ -27,5 +29,6 @@ URL - localhost:18080/v1/accounts/123/124/11000 - amount transfer more than acco
 
 
 3. get account
- URL - localhost:18080/v1/accounts/123
+   
+URL - localhost:18080/v1/accounts/123
   
