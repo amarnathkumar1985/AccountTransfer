@@ -15,6 +15,7 @@ URL - localhost:18080/v1/accounts
     "accountId":"124",
     "balance": "3000.00"
 }
+
 2. Amount transfer
 
 URL - localhost:18080/v1/accounts/123/124/3000
