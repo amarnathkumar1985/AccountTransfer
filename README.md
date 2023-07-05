@@ -19,9 +19,12 @@ URL - localhost:18080/v1/accounts
 URL - localhost:18080/v1/accounts/123/124/3000
 
 validate all scenario
-URL - localhost:18080/v1/accounts/123/124/-3000 - for negative balnce
+URL - localhost:18080/v1/accounts/123/124/-3000 - for negative balnce    
+
 URL - localhost:18080/v1/accounts/123/125/3000 - account does not exist
+
 URL - localhost:18080/v1/accounts/123/124/11000 - amount transfer more than account balance
+
 
 3. get account
  URL - localhost:18080/v1/accounts/123
