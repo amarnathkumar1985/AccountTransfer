@@ -22,7 +22,7 @@ URL - localhost:18080/v1/accounts/123/124/3000
 
 validate all scenario
 
-URL - localhost:18080/v1/accounts/123/124/-3000 - for negative balnce    
+URL - localhost:18080/v1/accounts/123/124/-3000 - for negative balance    
 
 URL - localhost:18080/v1/accounts/123/125/3000 - account does not exist
 
