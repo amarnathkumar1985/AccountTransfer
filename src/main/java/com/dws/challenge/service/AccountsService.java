@@ -43,10 +43,8 @@ public class AccountsService {
 		checkValidations(accountFromId,accountToId,amount);
 		Account accountFrom = getAccount(accountFromId);
 		Account accountTo =   getAccount(accountToId);
-		final long fromId = Long.parseLong(accountFromId);
-		final long toId=  Long.parseLong(accountToId);
-		Object lock1 = fromId < toId ? accountFrom:accountTo ;
-		Object lock2 = fromId > toId ? accountFrom:accountTo ;
+		Object lock1 = accountFromId.compareTo(accountToId) < 0 ? accountFrom:accountTo ;
+		Object lock2 = accountFromId.compareTo(accountToId) > 0 ? accountFrom:accountTo ;
 		
 		synchronized (lock1) {
 			synchronized (lock2) {
@@ -68,6 +66,10 @@ public class AccountsService {
 	private void checkValidations(String accountFromId, String accountToId, BigDecimal amount)throws Exception  {
 	  Account accountFrom = getAccount(accountFromId);
 	  Account accountTo = getAccount(accountToId);
+
+          if(accountFromId.compareTo(accountToId) == 0) {
+		  throw new AmountTransferException("Account name should be diffrent");
+	  }		
 	  if(amount.compareTo(BigDecimal.ZERO)<0) {
 		  throw new AmountTransferException("Amount transfer can't be negative");
 	  }
